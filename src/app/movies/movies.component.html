@@ -1,0 +1,26 @@
+<app-search (moviesList)="myMoviesList($event)"></app-search>
+
+<<<<<<< HEAD
+<div *ngIf="hasInput; else notFound">
+    <div *ngFor="let movie of movies" (click)="getMovieId(movie.id)">
+        <h2>{{ movie.title }}</h2>
+        <span><em>{{ movie.release_date }}</em></span>
+        <br>
+        <span>{{ movie.overview }}</span>
+        <br>
+        <img src="{{ imgageUrl + movie.poster_path }}"/>
+=======
+<div *ngIf="hasMovies; else notFound">
+    <div class="card" style="width: 18rem;" *ngFor="let movie of movies" (click)="getMovieId(movie.id)">
+        <img class="card-img-top" src="{{ imgageUrl + movie.poster_path }}" alt="Card image cap">
+        <div class="card-body d-flex flex-row">
+        <h5 class="card-title"> title {{ movie.title }}</h5>
+        <p class="card-text">{{ movie.overview }}</p>
+        <p class="card-text">{{ movie.release_date }}</p>
+        </div>
+>>>>>>> a30c201ca8740019b195bcdb65c8b2182f9f3d81
+    </div>
+</div>
+<ng-template #notFound>
+    <h1>Not Found</h1>
+</ng-template>

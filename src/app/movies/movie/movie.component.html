@@ -1,0 +1,8 @@
+<div *ngIf="movie">
+    <h2>{{ movie.title }}</h2>
+    <span><em>{{ movie.release_date }}</em></span>
+    <br>
+    <span>{{ movie.overview }}</span>
+    <br>
+    <img src="{{ imgageUrl + movie.poster_path }}"/>
+</div>
