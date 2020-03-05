@@ -9,12 +9,8 @@ import { Movie } from '../movie';
 })
 export class MoviesComponent implements OnInit {
 
-  imgageUrl: string = "https://image.tmdb.org/t/p/w500";
-<<<<<<< HEAD
+  imageUrl: string = "https://image.tmdb.org/t/p/w500";
   hasInput: boolean = true;
-=======
-  hasMovies: boolean = true;
->>>>>>> a30c201ca8740019b195bcdb65c8b2182f9f3d81
   movies: Movie[];
 
   constructor(private router: Router) { }
@@ -22,7 +18,6 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-<<<<<<< HEAD
   //Todo pass inteface and sending "not found message in case of error"
   myMoviesList(data: any){    
     if(data.results.length){
@@ -30,15 +25,6 @@ export class MoviesComponent implements OnInit {
     }
     else{      
       this.hasInput = false;
-=======
-  //Todo pass inteface
-  myMoviesList(data: any){
-    if(data.results.length > 0){
-      this.hasMovies = true;
-    }
-    else{      
-      this.hasMovies = false;
->>>>>>> a30c201ca8740019b195bcdb65c8b2182f9f3d81
     }
     let moviesList:Movie[] = data.results;
     this.movies = moviesList;

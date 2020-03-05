@@ -12,7 +12,7 @@ export class MovieComponent implements OnInit {
 
   id: number;
   movie: Movie;
-  imgageUrl: string = "https://image.tmdb.org/t/p/w500";
+  imageUrl: string = "https://image.tmdb.org/t/p/w500";
 
   constructor(private service: MoviesService, private route: ActivatedRoute) { }
 
